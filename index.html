@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <!-- Required meta tags -->
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+			<!-- Bootstrap CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="popup/magnific-popup.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="popup/jquery.magnific-popup.js"></script> 
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<div id="banner">
+			<header id="logo">
+				<img src="img/logo2x.png" alt="">
+				<h1>Ferry Irmansyah</h1>
+				<span id="jobdesc">
+					An Student In Universitas 17 Agustus 1945 Cirebon
+				</span>
+			</header>
+			<div id="overlay"></div>
+		</div>
+		<section>
+			
+			<div class="container">
+				<a href="https://web.facebook.com/ferryirmansyah.00" class="facebook">Invite Me on :</a>
+				<a href="https://twitter.com/irmansyah_ferry" class="twitter">@ferry</a>
+				<a href="https://www.youtube.com/channel/UCyRiSPNFltnEYMin9dWCFUw?view_as=subscriber" class="youtube">@ferry</a>
+				<a href="https://www.instagram.com/ferry_irmansyah/" class="instagram">@ferry</a>
+			</div>
+		
+		
+	<h1 class="judul">My Activity</h1>
+	<div class="gallery">
+		<div class="box"><a href="images/1.jpg" title="Gambar 1"><img src="images/1.jpg" alt=""></a></div>
+		<div class="box"><a href="images/2.jpg" title="Gambar 2"><img src="images/2.jpg" alt=""></a></div>
+		<div class="box"><a href="images/3.jpg" title="Gambar 3"><img src="images/3.jpg" alt=""></a></div>
+		<div class="box"><a href="images/4.jpg" title="Gambar 4"><img src="images/4.jpg" alt=""></a></div>
+		<div class="box"><a href="images/5.jpg" title="Gambar 5"><img src="images/5.jpg" alt=""></a></div>
+	</div>
+			<div class="video">
+				<a href="#" ></a> <br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/NBZ9Ro6UKV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  </div>
+
+	<aside class="testimonial">
+		<span>Motto From : <strong>Ferry Irmansyah</strong></span>
+		<h3>Biarlah menderita saat Ini, daripada mati sebelum menderita</h3>
+	</aside>
+			<div class="buku">
+				<h2>Isikan buku tamu berikut</h2>
+				Nama	:	<input type="text" id="nama" /><br />
+				Email	:	<input type="email" id="email" /><br />
+				Pesan	:	<textarea id="pesan"></textarea>
+			
+				<br /><br />
+				<button id="submit">Submit</button>
+				<button id="submit"><a href = "mailto:irmansyahferry@gmail.com">Submit in Email</a></button>
+		
+				<br /><br />
+				<h1>Daftar Buku tamu</h1>
+				<div id="guest-book-list"> 
+				</div>
+			  </div>
+
+		
+	<footer>
+		<div class="content">
+			<div class="box">&copy; <a href="http://www.tutorial-webdesign.com">FRY</a> | All Right Reserved</div>
+			<div class="box"><strong>Find me on: </strong><a href="https://twitter.com/irmansyah_ferry">Twitter</a> / <a href="https://web.facebook.com/ferryirmansyah.00">Facebook</a> / <a href="https://web.facebook.com/ferryirmansyah.00">Instagram</a><br><br><strong>Phone:</strong> +6289698464412; <strong>Email:</strong> irmansyahferry@gmail.com</div>
+		</div>
+	</footer>
+
+	<script>
+		document.getElementById('submit').addEventListener('click', function(){
+		  var nama = document.getElementById('nama').value;
+		  var email = document.getElementById('email').value;
+		  var pesan = document.getElementById('pesan').value;
+	
+		  var htmlTemplate = `
+			<ul>
+			  <li>Nama: ${nama}</li>
+			  <li>Email: ${email}</li>
+			  <li>Pesan: ${pesan}</li>
+			</ul> 
+		  `
+		  var oldValue = document.getElementById('guest-book-list').innerHTML;
+		  document.getElementById('guest-book-list').innerHTML = oldValue + htmlTemplate;
+		});
+	  </script>
+	<script src="js/scripts.js"></script>
+	 
+</body>
+</html>
